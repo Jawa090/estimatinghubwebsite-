@@ -1,0 +1,339 @@
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em rgba(229, 62, 62, 0.6));
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em rgba(229, 62, 62, 0.6));
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Enhanced styling for the website */
+.section-heading {
+  position: relative;
+  display: inline-block;
+}
+
+.section-heading::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #ea384c, #ff6b6b);
+  border-radius: 3px;
+}
+
+/* Improved glass-card styling */
+.glass-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 
+    0 8px 32px 0 rgba(31, 38, 135, 0.2),
+    0 4px 8px 0 rgba(229, 62, 62, 0.3);
+}
+
+/* Custom animations */
+@keyframes float-shadow {
+  0%, 100% {
+    transform: translateY(0);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  }
+  50% {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.1);
+  }
+}
+
+.float-shadow {
+  animation: float-shadow 4s ease-in-out infinite;
+}
+
+/* Enhanced button styling */
+.btn-glow {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-glow::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%);
+  animation: rotate 4s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* New Button hover effects */
+.button-3d {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.button-3d:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(234, 56, 76, 0.4);
+}
+
+/* Pulse effect for call-to-action buttons */
+@keyframes pulse-border {
+  0% {
+    box-shadow: 0 0 0 0 rgba(234, 56, 76, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(234, 56, 76, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(234, 56, 76, 0);
+  }
+}
+
+.pulse-border {
+  animation: pulse-border 2s infinite;
+}
+
+/* Shine effect for buttons */
+.shine-button {
+  position: relative;
+  overflow: hidden;
+}
+
+.shine-button::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(30deg);
+  transition: all 0.5s;
+  opacity: 0;
+}
+
+.shine-button:hover::after {
+  opacity: 1;
+  left: 100%;
+  transition: all 0.5s;
+}
+
+/* Enhanced card hover effects */
+.hover-card {
+  transition: all 0.3s ease;
+}
+
+.hover-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Modern gradient backgrounds */
+.gradient-bg-red {
+  background: linear-gradient(135deg, #ea384c 0%, #ff7676 100%);
+}
+
+.gradient-bg-gray {
+  background: linear-gradient(135deg, #333333 0%, #555555 100%);
+}
+
+/* Custom slow bounce animation for down arrow */
+@keyframes bounce-slow {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 3s infinite;
+}
+
+/* Home section content styling */
+.home-feature {
+  transition: all 0.3s ease-in-out;
+}
+
+.home-feature:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(234, 56, 76, 0.2);
+}
+
+/* Add smooth scrolling for the entire page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Add section transitions */
+section {
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Highlight active section */
+section:target {
+  animation: highlight 1s ease-out;
+}
+
+@keyframes highlight {
+  0% {
+    background-color: rgba(234, 56, 76, 0.1);
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+/* Enhance section link indicators */
+.section-indicator {
+  position: relative;
+}
+
+.section-indicator::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #ea384c;
+  transition: width 0.3s ease;
+}
+
+.section-indicator:hover::after,
+.section-indicator.active::after {
+  width: 100%;
+}
+
+/* Improve mobile navigation */
+@media (max-width: 768px) {
+  .mobile-nav-item {
+    transition: background-color 0.3s ease;
+  }
+  
+  .mobile-nav-item:active {
+    background-color: rgba(234, 56, 76, 0.1);
+  }
+  
+  /* Enhanced mobile dropdown */
+  .mobile-dropdown {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+  }
+  
+  .mobile-dropdown.open {
+    max-height: 500px;
+    transition: max-height 0.5s ease-in;
+  }
+}
+
+/* Responsive dropdown improvements */
+@media (max-width: 1024px) {
+  .nav-dropdown {
+    position: relative;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 10;
+    border-radius: 4px;
+    padding: 8px 0;
+    margin-top: 8px;
+  }
+  
+  .nav-dropdown:hover .dropdown-content {
+    display: block;
+    animation: fadeIn 0.3s ease;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+}
+
+/* Service item marker animation */
+.service-marker {
+  position: relative;
+}
+
+.service-marker::before {
+  content: '';
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  background: #f97316;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.service-marker:hover::before {
+  width: 10px;
+  height: 10px;
+}
