@@ -100,7 +100,7 @@ const Header = () => {
                       }}
                       className={`font-medium hover:text-construction-orange transition-colors duration-200 flex items-center ${scrolled ? 'text-construction-darkGray' : 'text-white'}`}
                     >
-                      <Home className="h-4 w-4 mr-1" />
+                      {/* <Home className="h-4 w-4 mr-1" /> */}
                       Home
                     </a>
                   </NavigationMenuItem>

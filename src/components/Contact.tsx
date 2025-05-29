@@ -197,7 +197,7 @@ const Contact = () => {
                   <Phone className="mr-2 text-construction-orange shrink-0 mt-1" size={18} />
                   <div>
                     <h4 className="text-sm font-semibold text-gray-600 mb-1">Call Us</h4>
-                    <p className="text-construction-blue">718-719-6171</p>
+                    <p className="text-construction-blue">+(212) 450-7419</p>
                   </div>
                 </div>
                 
@@ -205,7 +205,7 @@ const Contact = () => {
                   <MapPin className="mr-2 text-construction-orange shrink-0 mt-1" size={18} />
                   <div>
                     <h4 className="text-sm font-semibold text-gray-600 mb-1">Office</h4>
-                    <p className="text-gray-700">898 Bay Ridge Avenue, Brooklyn, NY</p>
+                    <p className="text-gray-700">876 70th street Brooklyn  NY 11228</p>
                   </div>
                 </div>
                 
@@ -213,7 +213,7 @@ const Contact = () => {
                   <Check className="mr-2 text-construction-orange shrink-0 mt-1" size={18} />
                   <div>
                     <h4 className="text-sm font-semibold text-gray-600 mb-1">Working Hours</h4>
-                    <p className="text-gray-700">Mon - Fri: 9:00 AM - 5:00 PM</p>
+                    <p className="text-gray-700">Mon - Fri: 5:00 AM - 5:00 PM</p>
                   </div>
                 </div>
               </div>

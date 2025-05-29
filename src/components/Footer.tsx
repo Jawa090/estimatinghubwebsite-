@@ -83,11 +83,11 @@ const Footer = () => {
             <ul className="space-y-4">
               <li className="flex items-start">
                 <MapPin size={18} className="mr-2 mt-1 text-construction-orange" />
-                <span>898 Bay Ridge Avenue, Brooklyn, NY</span>
+                <span>876 70th street Brooklyn NY 11228</span>
               </li>
-              <li className="flex items-center">8
+              <li className="flex items-center">
                 <Phone size={18} className="mr-2 text-construction-orange" />
-                <span>+1 (555) 123-4567</span>
+                <span>+(212) 450-7419</span>
               </li>
               <li className="flex items-center">
                 <Mail size={18} className="mr-2 text-construction-orange" />
