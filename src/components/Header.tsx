@@ -58,11 +58,11 @@ const Header = () => {
           <div className="flex items-center space-x-6 text-sm">
             <div className="flex items-center">
               <Phone className="h-4 w-4 mr-2" />
-              <span>+1 (555) 123-4567</span>
+              <span>+(212) 450-7419</span>
             </div>
             <div className="flex items-center">
               <Mail className="h-4 w-4 mr-2" />
-              <span>contact@constructionoutsourcing.com</span>
+              <span>sales@estimatinghub.com</span>
             </div>
           </div>
           <div className="flex items-center space-x-6 text-sm">
@@ -72,7 +72,7 @@ const Header = () => {
             </div>
             <div className="flex items-center">
               <MapPin className="h-4 w-4 mr-2" />
-              <span>123 Construction Ave, Building City</span>
+              <span>876 70th street Brooklyn  NY 11228</span>
             </div>
           </div>
         </div>

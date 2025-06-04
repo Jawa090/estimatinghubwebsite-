@@ -189,7 +189,7 @@ const Contact = () => {
                   <Mail className="mr-2 text-construction-orange shrink-0 mt-1" size={18} />
                   <div>
                     <h4 className="text-sm font-semibold text-gray-600 mb-1">Email Us</h4>
-                    <p className="text-construction-blue">info@constructionhub.com</p>
+                    <p className="text-construction-blue">sales@estimatinghub.com</p>
                   </div>
                 </div>
                 
