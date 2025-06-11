@@ -1,4 +1,3 @@
-
 import { useEffect, useRef } from 'react';
 import { Card } from "@/components/ui/card";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
@@ -6,54 +5,53 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 const Clients = () => {
   const clientLogos = [
     { 
-      name: "TechBuild Construction", 
-      logo: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=300&h=200&auto=format&fit=crop&q=80"
+      name: "Housing Authority", 
+      logo: "/qwe.jpg"
     },
     { 
-      name: "Innovate Developers", 
-      logo: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=300&h=200&auto=format&fit=crop&q=80" 
+      name: "DASNY", 
+      logo: "/abbas.jpg" 
     },
     { 
-      name: "PrimeArch Solutions", 
-      logo: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=300&h=200&auto=format&fit=crop&q=80" 
+      name: "School Construction Authority", 
+      logo: "/scs.jpg" 
     },
     { 
-      name: "StructureX Corp", 
-      logo: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=300&h=200&auto=format&fit=crop&q=80" 
+      name: "MTA (Metropolitan Transportation Authority)", 
+      logo: "/metro.jpg" 
     },
     { 
-      name: "BuildTech Enterprises", 
-      logo: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=300&h=200&auto=format&fit=crop&q=80" 
+      name: "City of Newark", 
+      logo: "/city.jpg" 
     },
-    { 
-      name: "Foundation Partners", 
-      logo: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=300&h=200&auto=format&fit=crop&q=80" 
-    },
+
+
+
   ];
 
   const scrollContainerRef = useRef<HTMLDivElement>(null);
-  
+
   useEffect(() => {
     const scrollContainer = scrollContainerRef.current;
     if (!scrollContainer) return;
-    
+
     let animationId: number;
     let scrollPosition = 0;
-    
+
     const scroll = () => {
       if (!scrollContainer) return;
-      
+
       scrollPosition += 0.5;
       if (scrollPosition >= scrollContainer.scrollWidth / 2) {
         scrollPosition = 0;
       }
-      
+
       scrollContainer.scrollLeft = scrollPosition;
       animationId = requestAnimationFrame(scroll);
     };
-    
+
     animationId = requestAnimationFrame(scroll);
-    
+
     return () => {
       cancelAnimationFrame(animationId);
     };
@@ -81,21 +79,22 @@ const Clients = () => {
           <div 
             ref={scrollContainerRef}
             className="flex items-center space-x-8 overflow-x-scroll scrollbar-none py-8"
+            style={{ minWidth: "100%", scrollBehavior: "smooth" }}
           >
-            {/* Double the client logos to create infinite scroll effect */}
-            {[...clientLogos, ...clientLogos].map((client, index) => (
+            {/* Repeat the client logos 4 times for a longer infinite scroll */}
+            {[...Array(4)].flatMap(() => clientLogos).map((client, index) => (
               <Card 
                 key={index} 
-                className="flex-shrink-0 transition-all hover:scale-105 duration-300 shadow-lg overflow-hidden border border-gray-200 hover:border-red-400 group"
+                className="flex-shrink-0 transition-all hover:scale-105 duration-300 shadow-lg overflow-hidden border border-gray-200 hover:border-red-400 group w-[200px] md:w-[240px]"
               >
-                <AspectRatio ratio={16/9} className="w-[280px] sm:w-[320px]">
+                <div className="flex items-center justify-center bg-white" style={{ height: "100px" }}>
                   <img 
                     src={client.logo} 
                     alt={`${client.name} logo`}
-                    className="object-cover w-full h-full grayscale hover:grayscale-0 transition-all duration-300 group-hover:grayscale-0"
+                    className="object-contain w-[140px] h-[80px] grayscale hover:grayscale-0 transition-all duration-300 group-hover:grayscale-0"
                     loading="lazy"
                   />
-                </AspectRatio>
+                </div>
                 <div className="p-3 bg-white group-hover:bg-red-50 transition-colors">
                   <h3 className="font-medium text-sm text-center text-gray-800 group-hover:text-construction-orange transition-colors">{client.name}</h3>
                 </div>
