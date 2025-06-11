@@ -1,4 +1,3 @@
-
 import { useState, useEffect, useRef } from 'react';
 
 interface StatProps {
@@ -83,16 +82,16 @@ const StatsCounter = () => {
         
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-10">
           <div className="p-8 bg-white rounded-2xl shadow-xl transform hover:-translate-y-2 transition-all duration-500 border-t-4 border-construction-orange float-shadow" data-aos="fade-up" data-aos-delay="100">
-            <StatCounter value={500} suffix="+" description="Projects Completed" />
+            <StatCounter value={5000} suffix="+" description="Projects Completed" />
           </div>
           <div className="p-8 bg-white rounded-2xl shadow-xl transform hover:-translate-y-2 transition-all duration-500 border-t-4 border-construction-orange float-shadow" data-aos="fade-up" data-aos-delay="200">
             <StatCounter value={95} suffix="%" description="Client Retention Rate" />
           </div>
           <div className="p-8 bg-white rounded-2xl shadow-xl transform hover:-translate-y-2 transition-all duration-500 border-t-4 border-construction-orange float-shadow" data-aos="fade-up" data-aos-delay="300">
-            <StatCounter value={32} suffix="M" description="Square Feet Built" />
+            <StatCounter value={50} suffix="+" description="Expert Estimators" />
           </div>
           <div className="p-8 bg-white rounded-2xl shadow-xl transform hover:-translate-y-2 transition-all duration-500 border-t-4 border-construction-orange float-shadow" data-aos="fade-up" data-aos-delay="400">
-            <StatCounter value={42} suffix="" description="Countries Served" />
+            <StatCounter value={1} suffix="" description="Offshore services across all USA" />
           </div>
         </div>
       </div>

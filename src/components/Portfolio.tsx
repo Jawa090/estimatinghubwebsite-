@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { 
   Carousel,
@@ -17,43 +16,78 @@ const Portfolio = () => {
       id: 1,
       title: "Modern Office Building",
       category: "commercial",
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=2070&auto=format&fit=crop",
+      image: "/download.jpeg",
       description: "Complete office building estimation and project management"
     },
     {
       id: 2,
       title: "Luxury Apartment Complex",
       category: "residential",
-      image: "https://images.unsplash.com/photo-1527576539890-dfa815648363?q=80&w=2070&auto=format&fit=crop",
+      image: "/ali.jpeg",
       description: "Full-service estimation for multi-unit residential development"
     },
     {
       id: 3,
       title: "Shopping Mall Renovation",
       category: "commercial",
-      image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=2070&auto=format&fit=crop",
+      image: "/jaa.jpeg",
       description: "Cost estimation and project planning for mall renovation"
     },
     {
       id: 4,
       title: "Suburban Homes Project",
       category: "residential",
-      image: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=2070&auto=format&fit=crop",
+      image: "/ppp.jpeg",
       description: "Estimation services for 50-home suburban development"
     },
     {
       id: 5,
       title: "Industrial Warehouse",
       category: "industrial",
-      image: "https://images.unsplash.com/photo-1501854140801-50d01698950b?q=80&w=2070&auto=format&fit=crop",
+      image: "/ooo.jpeg",
       description: "Complete estimation for 100,000 sq ft industrial facility"
     },
     {
       id: 6,
       title: "Highway Infrastructure",
       category: "infrastructure",
-      image: "https://images.unsplash.com/photo-1433086966358-54859d0ed716?q=80&w=2070&auto=format&fit=crop",
+      image: "/lll.jpeg",
       description: "Cost estimation for major highway expansion project"
+    },
+    {
+      id: 7,
+      title: "JF Kennedy Airport",
+      category: "infrastructure",
+      image: "/uu.jpeg",
+      description: "Estimation and project management for JFK Airport expansion"
+    },
+    {
+      id: 8,
+      title: "Statue of Liberty",
+      category: "infrastructure",
+      image: "/sttt.jpeg",
+      description: "Restoration and maintenance estimation for Statue of Liberty"
+    },
+    {
+      id: 9,
+      title: "NYCHA",
+      category: "residential",
+      image: "/ooo.jpeg",
+      description: "Cost estimation for New York City Housing Authority projects"
+    },
+    {
+      id: 10,
+      title: "SCA",
+      category: "infrastructure",
+      image: "/pp.jpeg",
+      description: "School Construction Authority project estimations"
+    },
+    {
+      id: 11,
+      title: "DASNY",
+      category: "infrastructure",
+      image: "/ppp.jpeg",
+      description: "Dormitory Authority of the State of New York project estimations"
     },
   ];
 
@@ -137,23 +171,27 @@ const Portfolio = () => {
           <h3 className="text-2xl font-bold text-construction-blue text-center mb-8">Featured Projects</h3>
           <Carousel className="max-w-5xl mx-auto">
             <CarouselContent>
-              {portfolioItems.slice(0, 3).map((item) => (
-                <CarouselItem key={item.id} className="md:basis-1/2 lg:basis-1/3">
-                  <div className="p-2">
-                    <div className="bg-white rounded-lg overflow-hidden shadow-lg h-full">
-                      <img 
-                        src={item.image} 
-                        alt={item.title} 
-                        className="w-full h-48 object-cover"
-                      />
-                      <div className="p-4">
-                        <h4 className="font-bold text-lg text-construction-darkGray mb-2">{item.title}</h4>
-                        <p className="text-gray-600 text-sm">{item.description}</p>
+              {portfolioItems
+                .filter(item =>
+                  ["JF Kennedy Airport", "Statue of Liberty", "NYCHA", "SCA", "DASNY"].includes(item.title)
+                )
+                .map((item) => (
+                  <CarouselItem key={item.id} className="md:basis-1/2 lg:basis-1/3">
+                    <div className="p-2">
+                      <div className="bg-white rounded-lg overflow-hidden shadow-lg h-full">
+                        <img 
+                          src={item.image} 
+                          alt={item.title} 
+                          className="w-full h-48 object-cover"
+                        />
+                        <div className="p-4">
+                          <h4 className="font-bold text-lg text-construction-darkGray mb-2">{item.title}</h4>
+                          <p className="text-gray-600 text-sm">{item.description}</p>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </CarouselItem>
-              ))}
+                  </CarouselItem>
+                ))}
             </CarouselContent>
             <CarouselPrevious className="left-0" />
             <CarouselNext className="right-0" />

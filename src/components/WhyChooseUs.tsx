@@ -30,7 +30,7 @@ const WhyChooseUs = () => {
   ];
 
   const stats = [
-    { value: "500+", label: "Projects Completed" },
+    { value: "10000+", label: "Projects Completed" },
     { value: "95%", label: "Client Retention" },
     { value: "15+", label: "Years Experience" },
     { value: "50+", label: "Expert Team Members" }
@@ -157,13 +157,13 @@ const WhyChooseUs = () => {
                 className="rounded-lg shadow-xl w-full object-cover h-96 relative z-10"
               />
             </div>
-            <div className="bg-construction-blue text-white p-4 rounded-lg absolute -bottom-6 left-6 z-20 shadow-xl">
+            <div className=" text-white p-4 rounded-lg absolute -bottom-6 left-6 z-20 shadow-xl">
               <div className="flex items-center space-x-2">
-                <Award className="h-8 w-8 text-construction-orange" />
+                {/* <Award className="h-8 w-8 text-construction-orange" />
                 <div>
                   <div className="text-sm">Certified Excellence</div>
                   <div className="text-xs opacity-70">ISO 9001:2015</div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

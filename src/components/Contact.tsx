@@ -213,7 +213,7 @@ const Contact = () => {
                   <Check className="mr-2 text-construction-orange shrink-0 mt-1" size={18} />
                   <div>
                     <h4 className="text-sm font-semibold text-gray-600 mb-1">Working Hours</h4>
-                    <p className="text-gray-700">Mon - Fri: 5:00 AM - 5:00 PM</p>
+                    <p className="text-gray-700">Mon - Fri: 9:00 AM - 5:00 PM</p>
                   </div>
                 </div>
               </div>
